@@ -1,4 +1,4 @@
-# TTT
+# Text-Rock-Paper-Scissors-Game
 
 Requires playsound module
 
