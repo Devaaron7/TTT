@@ -10,7 +10,7 @@ from playsound import playsound
 
 # This area has the code to show the Gif files for a certain win/lose/tie situation
 
-
+media_path = "./music/"
 
 
 # Games code is defined as a function called "Game". This allows the tie outcome to call game()..
@@ -18,12 +18,14 @@ from playsound import playsound
 
 def game1():
     winsound.PlaySound(None, winsound.SND_ASYNC)
-    winsound.PlaySound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\intense.wav", winsound.SND_ASYNC)
+    winsound.PlaySound(media_path + "intense.wav", winsound.SND_ASYNC)
     print ("Rock, Paper, Scissors?\n\r")
     hanswer = input ("Type your answer\n\r")
     choices = ["rock", "paper", "scissors"]
+    while hanswer.lower() not in choices:
+        hanswer = input("Invalid choice, please type either rock, paper, or scissors\n")
     canswer = random.choice(choices)
-    playsound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\tie.wav", True)
+    playsound(media_path + "tie.wav", True)
     print("                 \n\r")
     print("Rock\n\r")
     time.sleep(1)
@@ -37,37 +39,37 @@ def game1():
 # This area defines winning Conditions for each choice:
     if hanswer.lower() == "rock" and canswer == "paper":
         winsound.PlaySound(None, winsound.SND_ASYNC)
-        winsound.PlaySound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\dio.wav", winsound.SND_ASYNC)
+        winsound.PlaySound(media_path + "dio.wav", winsound.SND_ASYNC)
         print("Paper beats Rock! I Win")
         time.sleep(3)
-        playsound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\lose.wav", True)
+        playsound(media_path + "lose.wav", True)
     if hanswer.lower() == "rock" and canswer == "scissors":
         winsound.PlaySound(None, winsound.SND_ASYNC)
-        winsound.PlaySound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\umad.wav", winsound.SND_ASYNC)
+        winsound.PlaySound(media_path + "umad.wav", winsound.SND_ASYNC)
         print("Rock beats Scissors....I Lost..")
-        playsound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\win.wav", True)
+        playsound(media_path + "win.wav", True)
     if hanswer.lower() == "paper" and canswer == "scissors":
         winsound.PlaySound(None, winsound.SND_ASYNC)
-        winsound.PlaySound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\dio.wav", winsound.SND_ASYNC)
+        winsound.PlaySound(media_path + "dio.wav", winsound.SND_ASYNC)
         print("Scissors beats paper!! I Win")
         time.sleep(3)
-        playsound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\lose.wav", True)
+        playsound(media_path + "lose.wav", True)
     if hanswer.lower() == "paper" and canswer == "rock":
         winsound.PlaySound(None, winsound.SND_ASYNC)
-        winsound.PlaySound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\umad.wav", winsound.SND_ASYNC)
+        winsound.PlaySound(media_path + "umad.wav", winsound.SND_ASYNC)
         print("Paper beats rock....I Lost..")
-        playsound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\win.wav", True)
+        playsound(media_path + "win.wav", True)
     if hanswer.lower() == "scissors" and canswer == "rock":
         winsound.PlaySound(None, winsound.SND_ASYNC)
-        winsound.PlaySound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\dio.wav", winsound.SND_ASYNC)
+        winsound.PlaySound(media_path + "dio.wav", winsound.SND_ASYNC)
         print("Rock beats scissors! I Win")
         time.sleep(3)
-        playsound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\lose.wav", True)
+        playsound(media_path + "lose.wav", True)
     if hanswer.lower() == "scissors" and canswer == "paper":
         winsound.PlaySound(None, winsound.SND_ASYNC)
-        winsound.PlaySound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\umad.wav", winsound.SND_ASYNC)
+        winsound.PlaySound(media_path + "umad.wav", winsound.SND_ASYNC)
         print("Scissors beats paper...how...how did I Lose!!!??")
-        playsound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\win.wav", True)
+        playsound(media_path + "win.wav", True)
 # This area defines a Tie
     if hanswer.lower() == canswer:
         print("It's a Tie!")
@@ -75,12 +77,14 @@ def game1():
         return game1()
 
 def game():
-    winsound.PlaySound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\sf4train.wav", winsound.SND_ASYNC)
+    winsound.PlaySound(media_path + "sf4train.wav", winsound.SND_ASYNC)
     print ("Rock, Paper, Scissors?\n\r")
     hanswer = input ("Type your answer\n\r")
     choices = ["rock", "paper", "scissors"]
+    while hanswer.lower() not in choices:
+        hanswer = input("Invalid choice, please type either rock, paper, or scissors\n")
     canswer = random.choice(choices)
-    playsound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\wait.wav", True)
+    playsound(media_path + "wait.wav", True)
     print("                 \n\r")
     print("Rock\n\r")
     time.sleep(1)
@@ -94,37 +98,37 @@ def game():
 # This area defines winning Conditions for each choice:
     if hanswer.lower() == "rock" and canswer == "paper":
         winsound.PlaySound(None, winsound.SND_ASYNC)
-        winsound.PlaySound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\dio.wav", winsound.SND_ASYNC)
+        winsound.PlaySound(media_path + "dio.wav", winsound.SND_ASYNC)
         print("Paper beats Rock! I Win")
         time.sleep(3)
-        playsound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\lose.wav", True)
+        playsound(media_path + "lose.wav", True)
     if hanswer.lower() == "rock" and canswer == "scissors":
         winsound.PlaySound(None, winsound.SND_ASYNC)
-        winsound.PlaySound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\umad.wav", winsound.SND_ASYNC)
+        winsound.PlaySound(media_path + "umad.wav", winsound.SND_ASYNC)
         print("Rock beats Scissors....I Lost..")
-        playsound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\win.wav", True)
+        playsound(media_path + "win.wav", True)
     if hanswer.lower() == "paper" and canswer == "scissors":
         winsound.PlaySound(None, winsound.SND_ASYNC)
-        winsound.PlaySound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\dio.wav", winsound.SND_ASYNC)
+        winsound.PlaySound(media_path + "dio.wav", winsound.SND_ASYNC)
         print("Scissors beats paper!! I Win")
         time.sleep(3)
-        playsound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\lose.wav", True)
+        playsound(media_path + "lose.wav", True)
     if hanswer.lower() == "paper" and canswer == "rock":
         winsound.PlaySound(None, winsound.SND_ASYNC)
-        winsound.PlaySound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\umad.wav", winsound.SND_ASYNC)
+        winsound.PlaySound(media_path + "umad.wav", winsound.SND_ASYNC)
         print("Paper beats rock....I Lost..")
-        playsound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\win.wav", True)
+        playsound(media_path + "win.wav", True)
     if hanswer.lower() == "scissors" and canswer == "rock":
         winsound.PlaySound(None, winsound.SND_ASYNC)
-        winsound.PlaySound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\dio.wav", winsound.SND_ASYNC)
+        winsound.PlaySound(media_path + "dio.wav", winsound.SND_ASYNC)
         print("Rock beats scissors! I Win")
         time.sleep(3)
-        playsound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\lose.wav", True)
+        playsound(media_path + "lose.wav", True)
     if hanswer.lower() == "scissors" and canswer == "paper":
         winsound.PlaySound(None, winsound.SND_ASYNC)
-        winsound.PlaySound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\umad.wav", winsound.SND_ASYNC)
+        winsound.PlaySound(media_path + "umad.wav", winsound.SND_ASYNC)
         print("Scissors beats paper...how...how did I Lose!!!??")
-        playsound(r"C:\Users\Office\Desktop\Collected Projects\Rock Paper Scissors\music\win.wav", True)
+        playsound(media_path + "win.wav", True)
 # This area defines a Tie
     if hanswer.lower() == canswer:
         print("It's a Tie!")
